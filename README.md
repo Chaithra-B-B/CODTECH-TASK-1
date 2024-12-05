@@ -2,7 +2,7 @@ Name-Chaithra B
 Company-CODTECH IT SOLUTIONS
 ID-CT08DS9847
 Domain-Data Analystics
-Duration-September-December 2024
+Duration-NOVEMBER-December 2024
 
 OVERVIEW OF THR PROJECT
 PROJECT-EXPLORATORY DATA ANALYSIS (EDA)
