@@ -1,0 +1,26 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+data=pd.read_csv("D:\Downloads\Job_Placement_Data.csv")
+data.head()
+data.tail()
+data.shape
+data.describe()
+data.columns
+data.nunique()
+data['sslc_percentage'].nunique()
+data.isnull().sum()
+job=data.drop(['ssc_board','degree_percentage'],axis=1)
+job.head()
+correlation = job.select_dtypes(include='number').corr()
+sns.heatmap(correlation,xticklabels=correlation.columns,yticklabels=correlation.columns,annot=True)
+sns.pairplot(job)
+sns.relplot(x='undergrad_degree', y='status', hue='gender', data=job)
+sns.relplot(x='undergrad_degree', y='status', hue='emp_test_percentage', data=job)
+sns.displot(job['hsc_subject'])
+sns.catplot(x='mba_percent',kind='box',data=job)
+sns.histplot(job['work_experience'], bins=10, kde=False)
+plt.xlabel('Work Experience')
+plt.ylabel('Frequency')
+plt.title('Histogram of Work Experience')
+plt.show()
